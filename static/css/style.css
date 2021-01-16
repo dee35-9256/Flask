@@ -1,0 +1,13 @@
+tr:nth-child(1) td:nth-child(5) { background-color: skyblue;}
+tr:nth-child(2) td:nth-child(5) { background-color: skyblue;}
+td:nth-child(5) { background-color: #f6b5c0;}
+
+.ycolor{
+     background-color:#fcfcbb;
+     }
+.rcolor{
+      background-color:#f6b5c0;
+    }
+.gcolor{
+      background-color:#b6b6b6;
+    }

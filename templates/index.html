@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                    <th style="background-color:#e4e4e3"></th>
+                {% for header in results[0].keys() %}
+                    <th style="background-color:#e4e4e3">{{ header }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in results %}
+            <tr>
+                <td><input type="checkbox" name="check"/></td>
+                <td class="ycolor">{{row['']}}</td>
+                <td class="ycolor">{{row['instrument_token']}}</td>
+                <td class="ycolor">{{row['exchange_token']}}</td>
+                <td>{{row['tradingsymbol']}}</td>
+                <td class="ycolor">{{row['name']}}</td>
+                <td class="ycolor">{{row['last_price']}}</td>
+                <td class="gcolor">{{row['expiry']}}</td>
+                <td class="gcolor">{{row['strike']}}</td>
+                <td class="gcolor">{{row['tick_size']}}</td>
+                <td class="gcolor">{{row['lot_size']}}</td>
+                <td class="ycolor">{{row['instrument_type']}}</td>
+                <td class="rcolor">{{row['segment']}}</td>
+                <td class="rcolor">{{row['exchange']}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
